@@ -11,8 +11,8 @@ func main() {
 	max_len := 0
 
 	for i := 0; i < len(str); i++ {
-		mp := make(map[byte]bool)
 		curr_len := 0
+		mp := make(map[byte]bool)
 
 		for j := i; j < len(str); j++ {
 			if mp[str[j]] {
@@ -22,7 +22,7 @@ func main() {
 			curr_len += 1
 		}
 
-		if curr_len > max_len {
+		if max_len < curr_len {
 			max_len = curr_len
 		}
 	}
